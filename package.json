@@ -1,0 +1,25 @@
+{
+  "name": "tableify",
+  "version": "0.0.1",
+  "description": "algorithm to optimise the placement at different table for a discussion group",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Syl-gauthier/tableify.git"
+  },
+  "keywords": [
+    "disg",
+    "daejeon",
+    "tzble-placement",
+    "algorithm"
+  ],
+  "author": "syl-gauthier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Syl-gauthier/tableify/issues"
+  },
+  "homepage": "https://github.com/Syl-gauthier/tableify#readme"
+}
