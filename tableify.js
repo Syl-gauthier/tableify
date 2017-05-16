@@ -184,11 +184,24 @@ var tableify = (function () {
     
     return results[0];
   }
+  
+  function getComplexity() {
+    var visibility = (nbrPeoples/Object.keys(tables).length) - 1;
+    console.log(visibility);
+    var globalVisibility = visibility * 3;
+        console.log(globalVisibility);
+
+    var complexity = globalVisibility/nbrPeoples; // when >1 perfect score impossible
+        console.log(complexity);
+
+    return complexity;
+  }
 
   return {
     addTable,
     check,
-    optimalDistribution
+    optimalDistribution,
+    getComplexity
   }
 })();
 
