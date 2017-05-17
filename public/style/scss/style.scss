@@ -1,0 +1,29 @@
+$backg2: #EEE;
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: grey;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root{
+  flex: 1;
+}
+
+
+header{
+  background-color: $backg2;
+  h1 {
+    text-align: center;
+  }
+}
+
+footer {
+  background-color: $backg2;
+    text-align: left;
+}
