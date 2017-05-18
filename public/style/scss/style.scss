@@ -1,10 +1,13 @@
 $backg2: #EEE;
+$border: #555 solid 2px;
+
 
 html {
   height: 100%;
 }
 
 body {
+  margin: 0px;
   background-color: grey;
   min-height: 100vh;
   display: flex;
@@ -12,18 +15,24 @@ body {
 }
 
 #root{
+  border: $border;
   flex: 1;
+  background-color: $backg2;
+  margin: 10px;
 }
 
 
 header{
   background-color: $backg2;
+  border-bottom: $border;
   h1 {
     text-align: center;
   }
 }
 
 footer {
+  padding-left: 30px;
+  border-top: $border;
   background-color: $backg2;
     text-align: left;
 }
