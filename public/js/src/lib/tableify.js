@@ -1,7 +1,6 @@
 'use strict';
 var seedrandom = require('seedrandom');
 
-
 var tableify = (function () {
 
   var rng = seedrandom('hello!');
@@ -34,6 +33,18 @@ var tableify = (function () {
     };
     setTotals();
     console.log(getTotals());
+  }
+  
+  function removeTable(letter) {
+    console.log('Table ' + letter + ' have been deleted.');
+    delete tables[letter];
+  }
+  
+  function getTables() {
+    return Object.keys(tables).map(function(key) {
+      tables[key].key = key;
+      return tables[key];
+    });
   }
 
   function getTotals() {
@@ -201,7 +212,9 @@ var tableify = (function () {
     addTable,
     check,
     optimalDistribution,
-    getComplexity
+    getComplexity,
+    getTables,
+    removeTable
   }
 })();
 
