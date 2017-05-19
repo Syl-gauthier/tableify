@@ -6,15 +6,6 @@ import {Tables, Table} from './react/tableManager.jsx';
 
 tableify.addTable(4, 1);
 tableify.addTable(5, 2);
-tableify.addTable(5, 2);
-tableify.addTable(5, 2);
-tableify.addTable(5, 2);
-tableify.addTable(5, 2);
-tableify.addTable(5, 2);
-
-console.log(tableify.getTables())
-
-console.log(tableify.optimalDistribution());
 
 class App extends React.Component {
   
@@ -35,12 +26,25 @@ class App extends React.Component {
     this.setState({tables: tableify.getTables()});
   }
   
+  addTable(state) {
+    console.log(state.total + '  ' + state.foreigner);
+    var korean = (state.total - state.foreigner);
+    console.log(korean);
+    tableify.addTable(korean, state.foreigner);
+    this.setState({tables: tableify.getTables()});
+  }
+  
+  calculate() {
+    console.log(tableify.optimalDistribution());
+  }
+  
   render() {
     return (
         (<div>
-          <button onClick={() => {this.addTable(1,1)}}>bouton</button>
           <Tables tables={this.state.tables}
-            onClick={(i) => {this.removeTable(i)}}/>
+            onRemove={(i) => this.removeTable(i)}
+            onAdd={(i) => this.addTable(i)} />
+          <button onClick={()=> this.calculate()}>CALCULATE</button>
         </div>)
       );
   }
