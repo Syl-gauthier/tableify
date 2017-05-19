@@ -19,6 +19,8 @@ var tableify = (function () {
   //setting functions (function called before assignPeople())
 
   function addTable(korean, foreigner = 0, letter) {
+    korean -= 0; //coerce to number
+    foreigner -= 0;
     if (!letter) {
       var index = 0;
       do {
