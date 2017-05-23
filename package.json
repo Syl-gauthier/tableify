@@ -10,7 +10,7 @@
     "build": "npm run build:css && npm run build:js --debug",
     "prebuild": "rimraf public/js/bundle.js public/style/css/style.css",
     "postbuild": "watchify public/js/src/reactApp.jsx -t babelify -o public/js/bundle.js -v --debug & node-sass -w public/style/scss/style.scss public/style/css/style.css",
-    "start": "node app.js",
+    "start": "node bundle.js",
     "start:dev": "nodemon app.js localhost 2000 & npm run postbuild & guard",
     "test": "mocha public/**/*.test.js"
   },
