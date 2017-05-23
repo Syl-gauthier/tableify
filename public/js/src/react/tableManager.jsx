@@ -1,7 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
-function Tables(props) {  
+  
+function Tables(props) {
   var lignes = props.tables.map((table) => {
     return (
       <Table key={table.key}
@@ -35,7 +34,6 @@ function Table(props) {
   );
 }
 
-
 class AddTable extends React.Component {
   constructor(props) {
     super(props);
@@ -52,7 +50,7 @@ class AddTable extends React.Component {
     newState[event.target.id] = event.target.value;
     this.setState(newState);
   }
-  
+    
   render() {
     return (<tr>
       <td><input type='text' placeholder='total' id='total' value={this.state.total} onChange={this.handleChange}></input></td>
@@ -62,5 +60,6 @@ class AddTable extends React.Component {
   }
 }
 
+export default Tables;
 export {Tables, Table};
 
