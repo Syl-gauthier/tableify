@@ -40,11 +40,17 @@ class App extends React.Component {
   render() {
     return (
         (<div>
-          <Tables tables={this.state.tables}
+          <article>
+            <Tables tables={this.state.tables}
             onRemove={(i) => this.removeTable(i)}
             onAdd={(i) => this.addTable(i)} />
-          <button onClick={()=> this.calculate()}>Compile</button>
-          <Distribution distrib={this.state.distribution} />
+          </article>
+          <article>
+            <button onClick={()=> this.calculate()}>Compile</button>
+          </article>
+          <article>
+            <Distribution distrib={this.state.distribution} />
+          </article>
         </div>)
       );
   }
