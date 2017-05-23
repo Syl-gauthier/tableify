@@ -4,7 +4,6 @@
   "description": "algorithm to optimise the placement at different table for a discussion group",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm run build",
     "build:css": "node-sass public/style/scss/style.scss public/style/css/style.css",
     "build:js": "browserify public/js/src/reactApp.jsx -t babelify -o public/js/bundle.js",
     "build": "npm run build:css && npm run build:js --debug",
@@ -32,6 +31,7 @@
   "homepage": "https://github.com/Syl-gauthier/tableify#readme",
   "dependencies": {
     "express": "^4.15.2",
+    "rimraf": "^2.6.1",
     "seedrandom": "^2.4.3"
   },
   "devDependencies": {
