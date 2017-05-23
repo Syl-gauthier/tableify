@@ -4,9 +4,10 @@
   "description": "algorithm to optimise the placement at different table for a discussion group",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npm run build:css && npm run build:js",
     "build:css": "node-sass public/style/scss/style.scss public/style/css/style.css",
-    "build:js": "browserify public/js/src/reactApp.jsx -t babelify -o public/js/bundle.js",
-    "build": "npm run build:css && npm run build:js --debug",
+    "build:js": "browserify public/js/src/reactApp.jsx -t babelify -o public/js/bundle.js --debug",
+    "build": "npm run build:css && npm run build:js",
     "prebuild": "rimraf public/js/bundle.js public/style/css/style.css",
     "postbuild": "watchify public/js/src/reactApp.jsx -t babelify -o public/js/bundle.js -v --debug & node-sass -w public/style/scss/style.scss public/style/css/style.css",
     "start": "node bundle.js",
