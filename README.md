@@ -2,11 +2,11 @@
 
 [link to the app](https://stormy-beach-24704.herokuapp.com/)
 
-This repository content a small [react app](https://stormy-beach-24704.herokuapp.com/) I wrote for a discussion group I attend, in Daejeon. [link](https://www.facebook.com/officialdisg/)
+This repository content a small [react app](https://stormy-beach-24704.herokuapp.com/) I wrote for a discussion group I attend, in Daejeon ([link to facebook](https://www.facebook.com/officialdisg/)).
 
-During this discussion group we are assigned randomly at tables to meet different people. Usually, we change table 2 time during a meeting (so we attend tree different table).
+During this discussion group we are assigned randomly at tables to meet different people. Usually, we change table twice during a meeting (so we attend tree different tables).
 
-With some friend, we noticed that too often we would meet the same people twice or even stay twince in a row with a very similar table composition. This app try to remedy this problem, so we can meet more different person :smile:.
+With some friends, we noticed that too often we would meet the same people twice or even stay twince in a row with a very similar table composition. This app try to remedy this problem, so we can meet more different person :smile:.
 
 ---
 
