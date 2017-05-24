@@ -2,27 +2,21 @@ $backg2: #EEE;
 $border: #555 solid 2px;
 $tableHead: #6B6;
 $tableBody: #CEC;
+
 html {
   height: 100%;
 }
 
 body {
-  margin: 0px;
-  background-color: grey;
   min-height: 100vh;
+  margin: 0px;
+  background: grey;
   display: flex;
   flex-direction: column;
 }
 
-#root {
-  border: $border;
-  flex: 1;
-  background-color: $backg2;
-  margin: 10px;
-}
-
 header {
-  background-color: $backg2;
+  background: $backg2;
   border-bottom: $border;
   h1 {
     text-align: center;
@@ -30,16 +24,20 @@ header {
 }
 
 footer {
+  background: $backg2;
   padding-left: 30px;
   border-top: $border;
-  background-color: $backg2;
   text-align: left;
+  display: flex;
+  justify-content: space-between;
 }
 
 #root {
-  width: 100%;
-  height: 100%;
-  div {
+  flex: 1;
+  background: $backg2;
+  border: $border;
+  margin: 30px;
+  >div {
     text-align: center;
     article {
       margin: 10px;
@@ -59,7 +57,7 @@ footer {
         td {
           background-color: $tableBody;
         }
-        input{
+        input {
           text-align: inherit;
           padding: 3px;
         }
@@ -70,7 +68,7 @@ footer {
           border: $border;
           border-radius: 6px;
           box-shadow: 3px 3px 3px #BBB;
-          font-weight:bolder;
+          font-weight: bolder;
           font-size: 17px;
         }
         button:hover {
@@ -86,7 +84,7 @@ footer {
         box-shadow: 5px 3px 3px #BBB;
       }
       >button:hover {
-          background-color: grey;
+        background-color: grey;
       }
     }
   }
